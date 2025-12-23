@@ -75,13 +75,13 @@ sleep 2
 # Start web server
 echo -e "${BLUE}🚀 Starting web interface on port 5173...${NC}"
 cd web
-npm run dev &
+npm run dev -- --host &
 WEB_PID=$!
 cd ..
 
 echo -e "\n${GREEN}✨ All services started!${NC}"
 echo "========================================="
-echo -e "📊 Web Dashboard: ${BLUE}http://localhost:5173${NC}"
+echo -e "📊 Web Dashboard: ${BLUE}http://localhost:5173${NC} (also on network)"
 echo -e "🔌 API Proxy: ${BLUE}http://localhost:3001${NC}"
 echo -e "💚 Health Check: ${BLUE}http://localhost:3001/health${NC}"
 echo "========================================="
